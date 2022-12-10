@@ -1,0 +1,12 @@
+clone:
+  git:
+    image: plugins/git
+    depth: 1
+
+pipeline:
+  build:
+    image: devforth/drone-builder
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - echo "test"
