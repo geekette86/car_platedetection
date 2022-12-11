@@ -1,3 +1,0 @@
-variable "message" {
-  type = string
-}
