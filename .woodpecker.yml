@@ -6,7 +6,5 @@ clone:
 pipeline:
   build:
     image: plugins/ansible
-    commands:
-      - ansibe
-    when:
-      status: [ success, failure ]
+    settings:
+      playbook: ansible.yml
