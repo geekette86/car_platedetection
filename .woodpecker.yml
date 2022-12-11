@@ -8,3 +8,4 @@ pipeline:
     image: plugins/ansible
     settings:
       playbook: ansible.yml
+      inventory: inventory
