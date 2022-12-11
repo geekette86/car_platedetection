@@ -22,7 +22,7 @@ pipeline:
         write: false
         diff: true
         check: true
-    when:
-      event: pull_request
+    #when:
+      #event: pull_request
     
    
