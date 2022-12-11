@@ -9,10 +9,21 @@ pipeline:
     settings:
       playbook: ansible.yml
       inventory: inventory
-    branches: [develop]
-  terraform:
+    branches: develop
+  terraform_fmt:
     image: jmccann/drone-terraform:1
     settings:
-      plan: true
+      actions: 
+        - fmt
+      fmt_options:
+        write: false
+        diff: true
+        check: true
+  terraform_plan:
+    image: jmccann/drone-terraform:1
+    settings:
+      actions:
+        - validate
+        - plan
     
    
