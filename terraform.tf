@@ -1,5 +1,5 @@
 resource "null_resource" "default" {
   provisioner "local-exec" {
-    command = "may the force be with us"
+    command = "echo 'may the force be with us'"
   }
 }
