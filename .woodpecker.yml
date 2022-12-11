@@ -4,8 +4,15 @@ clone:
     depth: 1
     
 pipeline:
-  build:
+  ansible:
     image: plugins/ansible
     settings:
       playbook: ansible.yml
       inventory: inventory
+    branches: [develop]
+  terraform:
+    image: jmccann/drone-terraform:1
+    settings:
+      plan: true
+    
+   
