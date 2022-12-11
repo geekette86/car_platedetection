@@ -5,8 +5,8 @@ clone:
     
 pipeline:
   build:
-    image: devforth/drone-builder
+    image: plugins/ansible:3
     commands:
-      - ls
+      - ansibe
     when:
       status: [ success, failure ]
